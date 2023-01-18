@@ -1,0 +1,42 @@
+Dialee - Database
+
+----------------------------------------------------------------------------
+Database
+----------------------------------------------------------------------------
+CREATE DATABASE IF NOT EXISTS dialeeTest;
+----------------------------------------------------------------------------
+Tables
+----------------------------------------------------------------------------
+
+Table name: userSignUp
+
+
+CREATE TABLE userSignUp(id INT NOT NULL AUTO_INCREMENT,
+username VARCHAR(25)NOT NULL,
+passwd VARCHAR(25) NOT NULL,
+phoneNumber INT(10)NOT NULL,PRIMARY KEY(id));
+
+----------------------------------------------------------------------------
+
+Table name: shopSignUp
+
+
+CREATE TABLE shopSignUp(sid INT NOT NULL AUTO_INCREMENT,
+shopName VARCHAR(40)NOT NULL,
+shopAddress VARCHAR(50)NOT NULL,
+shopPincode INT(6)NOT NULL,
+shopLatitude FLOAT(10,8),shopLongitude FLOAT(10,8), 
+shopPhoneNumber INT(10)NOT NULL,
+shopPhoneNumber2 INT(10)NOT NULL,
+shopOpeningTime TIME NOT NULL,shopClosingTime TIME NOT NULL,
+PRIMARY KEY(sid));
+
+----------------------------------------------------------------------------
+
+Table name: shopCategories
+
+
+CREATE TABLE shopCategories(cid INT NOT NULL AUTO_INCREMENT,
+category VARCHAR(25) NOT NULL,PRIMARY KEY(cid));
+
+----------------------------------------------------------------------------
